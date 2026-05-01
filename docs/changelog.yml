@@ -1,0 +1,24 @@
+- "2026":
+  - "2026-05-01":
+      - text: 新建我的个人笔记本～
+
+# - "2026":
+#   - "2026-01-16":
+#     - newpage: 
+#         text: xxx完工！ // 显示的文字内容
+#         href: /sys/aai // 链接地址
+
+# - "2025":
+#   - "2025-02-01":
+#     - function: 新增xxx功能 // 功能更新
+#   - "2025-01-30":
+#     - refactor: xxx大更新！ // 重构/优化
+#     - newpage: 
+#         text: 新增xxx
+#         href: /board
+#   - "2025-01-07":
+#     - pageupdate: // 页面内容更新
+#         text: xxx完工！
+#         href: /misc/psychology/intro/
+#     - refactor: 
+

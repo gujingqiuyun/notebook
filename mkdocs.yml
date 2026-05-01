@@ -1,4 +1,186 @@
-site_name: My Docs
-site_url: https://gujingqiuyun.github.io/notebook/
+site_name: Qiuyunnn's Notebook  # 🟢 替换为你的网站名
+site_author: gujingqiuyun  # 🟢 替换为你的名字
+site_url: 'https://gujingqiuyun.github.io/notebook/'  # 🟢 替换为你的实际网址
+site_description: 这是一个由 Material for MkDocs 驱动的个人知识库
+
+repo_url: https://github.com/gujingqiuyun/notebook  # 🟢 替换为你的仓库地址
+repo_name: Qiuyunnn/Notebook  # 🟢 替换为你的仓库名
+use_directory_urls: false   
+
+copyright: Copyright &copy; 2026-2026 Qiuyunnn  # 🟢 替换为你自己的版权信息
+
 theme:
   name: material
+  language: zh
+  favicon: assets/favicon.png
+  custom_dir: overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.annotate
+    - content.footnote.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.path
+    - navigation.prune
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.share
+  font:
+    text: JetBrains Mono, LXGW WenKai Screen GB Screen 
+    code: JetBrains Mono, Consolas
+  icon:
+    repo: fontawesome/brands/git-alt
+    logo: material/notebook-multiple
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  palette:
+    - media: "(prefer-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 深色模式
+    - media: "(prefer-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色模式
+
+hooks:
+  - hooks/toc.py
+  - hooks/tikzautomata.py
+  # - hooks/tikzqtree.py
+
+plugins:
+  - blog:
+      draft: false
+  - glightbox  # 图片灯箱插件（点击放大图片）
+  - search
+  - awesome-pages
+  - git-revision-date-localized: # 显示文章最后更新时间的插件
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - changelog:
+      enable_git_follow: false
+  # - drawio
+  - heti: 
+      disable_serve: true
+  - statistics: 
+      page_template: "assets/template.html"
+      words_per_minute: 200
+      page_check_metadata: counter
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - changelog.md
+        - links.md
+      fallback_to_build_date: true
+  # - encryptcontent:  
+  #     remember_password: True 
+  #     password_file: 'passwords.yml'
+
+  # - tikzautomata
+  # - rss:
+  #     date_from_meta:
+  #       as_creation: date.created
+  #       as_update: date.updated
+  # - mkdocs-video:
+  #     is_video: True
+
+markdown_extensions:
+  - pymdownx.arithmatex: # 支持 LaTeX 数学公式渲染
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition         # 支持警告框/提示框
+  - pymdownx.details   # 支持折叠块
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:   # 支持代码块的分页标签
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: ⚓︎
+      title: 目录
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - md_in_html
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/solid/home
+      link: https://gujingqiuyun.github.io/notebook
+    - icon: fontawesome/solid/blog
+      link: https://gujingqiuyun.github.io
+    - icon: fontawesome/brands/github
+      link: https://github.com/gujingqiuyun
+    - icon: material/email
+      link: mailto:gujingqiuyun@gmail.com
+
+extra_css:
+  - css/card.css
+  - css/custom.css
+  - css/extra_changelog.css
+  - css/header.css
+  - css/sidebar.css
+  - css/neoteroi-css.css
+  - css/toc_extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
+
+extra_javascript:
+  - js/anchor.js
+  - js/katex.js
+  - js/toc.js
+  - js/typed.js
+  - js/custom.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js
+
+nav: 
+  - 🏫 Home:
+    - index.md
+    - 🕑 更新记录: changelog.md
+    # - 🔗友链: links.md
+    # - 📋留言板: board.md
+  - ✨ CS Self-learning:
+    - cs-self/index.md
+    - Terminal/Shell:
+      - cs-self/cli/index.md
+    - Git/Github:
+      - cs-self/git/index.md
+    - 工程规范:
+      - cs-self/spec/index.md
+    - Vibe Coding:
+      - cs-self/vibe/index.md

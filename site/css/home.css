@@ -1,0 +1,34 @@
+/* 主页 */
+.homepage {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    min-height: 62vh;
+    padding-top: 8vh;
+    margin-top: 0;
+    font-size: 120%;
+} 
+
+.md-typeset a {
+    border-bottom: none;
+}
+
+[data-md-color-scheme="slate"] {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../assets/images/home_background_dark.jpg');
+}
+
+
+[data-md-color-scheme="default"] {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../assets/images/home_background_light.jpg');
+    background-color: transparent;
+    background-size: cover;
+    /* position: relative; 使伪元素相对定位 */
+}
+
