@@ -24,8 +24,8 @@
 
 /* 夜间模式配色 */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #c2185b;
-  --md-primary-fg-color--dark: #8e0038;
+  --md-primary-fg-color: #f792ad;
+  --md-primary-fg-color--dark: #f792ad;
   --md-default-fg-color: rgba(235, 235, 235, 0.9);
   --md-default-fg-color--light: rgba(255, 255, 255, 0.7);
   --md-default-fg-color--lighter: rgba(255, 255, 255, 0.8);
@@ -47,20 +47,20 @@
 
 /* indigo 那块不能省去（好奇怪啊...） */
 [data-md-color-scheme=slate][data-md-color-primary=indigo] {
-  --md-typeset-a-color: #f06292
+  --md-typeset-a-color: #f792ad
 }
 
 [data-md-color-scheme="slate"] .md-top {
-  background-color: rgba(194, 24, 91, 0.8);
+  background-color: rgba(209, 153, 168);
   color: #fff;
 }
 
 [data-md-color-scheme="slate"] .md-top:focus {
-  background-color:  #e91e63;
+  background-color:  #f792ad;
 }
 
 [data-md-color-scheme="slate"] .md-top:hover {
-  background-color:  #e91e63;
+  background-color:  #f792ad;
 }
 
 [data-md-color-scheme="slate"] ::selection {
@@ -68,13 +68,13 @@
 }
 
 [data-md-color-scheme="slate"] strong {
-  color: #f06292;
+  color: #f792ad;
 }
 
 /* 白天模式配色 */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #e91e63;
-  --md-primary-fg-color--dark: #c2185b;
+  --md-primary-fg-color: #f792ad;
+  --md-primary-fg-color--dark: #f792ad;
   --md-primary-bg-color: #fafafa;
   --md-default-bg-color: rgba(255, 255, 255, 0.5);
   --md-footer-fg-color: #5a1231;
@@ -83,8 +83,8 @@
   --md-footer-fg-color--light: #000000;
   --md-footer-fg-color--lighter: #000000;
   --md-default-fg-color--lightest: rgba(0, 0, 0, 0.4);
-  --md-typeset-a-color: #e91e63;
-  --md-accent-fg-color:  #f8bbd0;
+  --md-typeset-a-color: #f57799;
+  --md-accent-fg-color:  #f9abc7;
   --md-code-bg-color: rgb(245, 245, 245);
   --md-code-hl-name-color: #000;
   --md-code-hl-comment-color: #8b8d95;
@@ -94,7 +94,7 @@
   --heimu-bg-color: #dcdcdc; 
   --heimu-text-color: #dcdcdc;
   --heimu-hover-text-color: #252525;
-  --heimu-link-hover-color: #c2185b;
+  --heimu-link-hover-color: #D199A8;
   --heimu-new-link-color: #d9534f;
 }
 
@@ -184,7 +184,7 @@ a:hover strong {
 
 /* 正文部分页面宽度扩大（移动端可能会有问题） */
 .md-grid {
-  max-width: 1350px; 
+  max-width: 1220px; 
 }
 
 /* 代码字体大小 */
@@ -201,19 +201,19 @@ a:hover strong {
 
 @media screen and (min-width: 960px) {
   html {
-    font-size: 137.5%;
+    font-size: 130%;
   }
 }
 
 @media screen and (min-width: 100em) {
   html {
-    font-size: 137.5%;
+    font-size: 130%;
   }
 }
 
 @media screen and (min-width: 125em) {
   html {
-    font-size: 137.5%;
+    font-size: 130%;
   }
 }
 
@@ -239,6 +239,7 @@ a:hover strong {
 .md-typeset a {
   border-bottom: 1px dashed;
 }
+
 
 .md-typeset a.md-content__button, .md-typeset .tabbed-labels.tabbed-labels--linked a, html .md-footer-meta.md-typeset a, .md-typeset .highlighttable a, .md-typeset a.headerlink, .md-typeset a.footnote-ref, .md-typeset a.glightbox, .md-typeset a.md-annotation__index {
   border-bottom: none;
@@ -272,7 +273,7 @@ img:not([src$=".svg"]) {
 }
 
 [data-md-color-scheme="default"] .md-header, [data-md-color-scheme="default"] .md-tabs {
-  background-color: rgba(233, 30, 99, 0.72);
+  background-color: rgba(246, 101, 150, 0.72);
   backdrop-filter: blur(10px);
 }
 
@@ -329,7 +330,7 @@ a .heimu,
 /* note（修改） */
 .md-typeset .admonition.note,
 .md-typeset details.note {
-  border-color: #e91e63;
+  border-color: #f792ad;
 }
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
@@ -337,7 +338,7 @@ a .heimu,
 }
 .md-typeset .note > .admonition-title::before,
 .md-typeset .note > summary::before {
-  background-color: #e91e63;
+  background-color: #f792ad;
   -webkit-mask-image: var(--md-admonition-icon--note);
           mask-image: var(--md-admonition-icon--note);
 }
@@ -345,7 +346,7 @@ a .heimu,
 /* example（修改） */
 .md-typeset .admonition.example,
 .md-typeset details.example {
-  border-color: #c2185b;
+  border-color: #f792ad
 }
 .md-typeset .example > .admonition-title,
 .md-typeset .example > summary {
@@ -353,7 +354,7 @@ a .heimu,
 }
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
-  background-color: #c2185b;
+  background-color: #f792ad;
   -webkit-mask-image: var(--md-admonition-icon--example);
           mask-image: var(--md-admonition-icon--example);
 }
@@ -377,7 +378,7 @@ a .heimu,
 /* bug（修改） */
 .md-typeset .admonition.bug,
 .md-typeset details.bug {
-  border-color: #d81b60;
+  border-color: #f792ad;
 }
 .md-typeset .bug > .admonition-title,
 .md-typeset .bug > summary {
@@ -385,7 +386,7 @@ a .heimu,
 }
 .md-typeset .bug > .admonition-title::before,
 .md-typeset .bug > summary::before {
-  background-color: #d81b60;
+  background-color: #f792ad;
   -webkit-mask-image: var(--md-admonition-icon--bug);
           mask-image: var(--md-admonition-icon--bug);
 }
@@ -547,4 +548,41 @@ a .heimu,
   background-color: rgb(232, 184, 51);
   -webkit-mask-image: var(--md-admonition-icon--theorem);
           mask-image: var(--md-admonition-icon--theorem);
+}
+
+/* 减小顶部导航栏的高度 */
+.md-header__inner {
+  height: 2.2rem; /* 原高度可能被 137.5% 撑大，可以尝试减小此值 */
+  padding: 0 0.8rem;
+  padding-top: 0.8rem !important;    /* 增加顶部间距 */
+    padding-bottom: 0.5rem !important; /* 增加底部间距以保持平衡 */
+    display: flex;
+    align-items: center;               /* 确保内容垂直居中 */
+}
+/* 强制标题栏和标签栏的左侧对齐 */
+.md-header__inner, 
+.md-tabs__inner {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0.4rem !important; /* 调整此值直到你满意，建议与蓝色版本一致 */
+}
+/* 彻底隐藏那个包含日期的 aside 标签 */
+aside.md-source-file {
+    display: none !important;
+}
+
+/* abstract / 概要（修改） */
+.md-typeset .admonition.abstract,
+.md-typeset details.abstract {
+  border-color: #f792ad; /* 这里修改左侧线条颜色 */
+}
+
+.md-typeset .abstract > .admonition-title,
+.md-typeset .abstract > summary {
+  background-color: rgba(247, 146, 173, 0.1); /* 这里修改背景颜色，记得保留 0.1 的透明度 */
+}
+
+.md-typeset .abstract > .admonition-title::before,
+.md-typeset .abstract > summary::before {
+  background-color: #f792ad; /* 这里修改图标颜色 */
 }
