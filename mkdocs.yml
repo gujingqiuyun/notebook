@@ -60,12 +60,6 @@ plugins:
   - glightbox  # 图片灯箱插件（点击放大图片）
   - search
   - awesome-pages
-  - git-revision-date-localized: # 显示文章最后更新时间的插件
-      type: datetime
-      timezone: Asia/Shanghai
-      locale: zh
-      enable_creation_date: true
-      fallback_to_build_date: true
   - changelog:
       enable_git_follow: false
   # - drawio
