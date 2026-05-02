@@ -29,13 +29,13 @@
 
 
 [data-md-color-scheme="slate"] .md-typeset .homepage a {
-    color: #8b8d95 !important; 
+    color: #cccccc !important; 
     border-bottom: none !important; 
 }
 
 [data-md-color-scheme="slate"] .md-typeset .homepage a:hover,
 [data-md-color-scheme="slate"] .md-typeset .homepage a:active {
-    color: #cccccc !important; 
+    color: #FFCA28 !important; 
     border-bottom: none !important; 
 }
 
@@ -44,6 +44,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('../assets/images/home_background_dark.jpg');
+    background-size: cover;
 }
 
 
